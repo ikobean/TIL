@@ -2,13 +2,13 @@
 
 #### -group by 절의 동작 원리
 
-```
+```SQL
 SELECT select_list
-FROM table_name
-WHERE search_condition
-GROUP BY group_by_expression
+  FROM table_name
+ WHERE search_condition
+ GROUP BY group_by_expression
 HAVING search_condition
-ORDER BY order_expression
+ ORDER BY order_expression
 ```
 
 

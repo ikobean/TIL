@@ -7,14 +7,14 @@
 
 
 > BEFORE
-```
+```SQL
 SELECT   c.MEM_ID
        , c.MEM_FIRST_NAME
        , c.MEM_LAST_NAME
        , C.MEM_CITY
-       , MAX(o.ODR_DATE)
-       , COUNT(o.ODR_NUM
-       , SUM(o.ODR_TOT)
+       , MAX(o.ODR_DATE) AS ODR_DATE
+       , COUNT(o.ODR_NUM AS ODR_NUM
+       , SUM(o.ODR_TOT) AS ODR_TOT
   FROM CUSTOMERS AS c
   LEFT OUTER JOIN ORDERS AS o
     ON C.MEM_ID = o.MEM_ID
@@ -27,7 +27,7 @@ GROUP BY c.MEM_ID
 
 
 > AFTER
-```
+```SQL 
 SELECT   c.MEM_ID
        , c.MEM_FIRST_NAME
        , c.MEM_LAST_NAME
