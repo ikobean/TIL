@@ -1,5 +1,11 @@
 package algorithm.levelOne;
 import java.util.*;
+/**
+ * 
+ * 프로그래머스 / cos pro 1급 모의고사 / 꽃피우기
+ * https://programmers.co.kr/learn/courses/11132/lessons/71155
+ * 
+ */
 public class BloomingFlower {
     public int solution(int[][] garden) {
 
@@ -16,12 +22,10 @@ public class BloomingFlower {
                 this.y = y;
             }
         }
-    	
+
+    	//현재 꽃 핀 곳의 좌표를 넣어야함 그래야 또 가서 찾지!      
         Queue<Flower> xy = new LinkedList<>();
         
-        
-        //현재 꽃 핀 곳의 좌표를 넣어야함 그래야 또 가서 찾지!
-       
         int max = garden.length;
         for(int i = 0; i < garden.length; i++){
             for(int j = 0; j < garden.length; j++){
